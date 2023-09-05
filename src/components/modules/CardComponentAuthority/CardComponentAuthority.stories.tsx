@@ -3,7 +3,7 @@ import { CardComponentAuthority } from './CardComponentAuthority';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/CardComponentAuthority',
+  title: 'modules/CardComponent/Authority',
   component: CardComponentAuthority,
   tags: ['autodocs'],
   argTypes: {},

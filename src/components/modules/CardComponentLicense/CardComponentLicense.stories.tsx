@@ -3,7 +3,7 @@ import { CardComponentLicense } from './CardComponentLicense';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/CardComponentLicense',
+  title: 'modules/CardComponent/License',
   component: CardComponentLicense,
   tags: ['autodocs'],
   argTypes: {},

@@ -3,7 +3,7 @@ import { CardComponentSkills } from './CardComponentSkills';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/CardComponentSkills',
+  title: 'modules/CardComponent/Skills',
   component: CardComponentSkills,
   tags: ['autodocs'],
   argTypes: {},
