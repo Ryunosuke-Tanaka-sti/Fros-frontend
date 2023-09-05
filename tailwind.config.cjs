@@ -137,6 +137,18 @@ module.exports = {
       pattern:
         /^(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
     },
+    {
+      pattern: /^(border-(?:main|error|pick)-(?:default|sub))$/,
+    },
+    {
+      pattern: /^(text-(?:main|error|pick)-(?:default|sub))$/,
+    },
+    {
+      pattern: /^(bg-(?:main|error|pick)-(?:default|sub))$/,
+    },
+    {
+      pattern: /^(ring-(?:main|error|pick)-(?:default|sub))$/,
+    },
   ],
   plugins: ['@headlessui/tailwindcss'],
 };
