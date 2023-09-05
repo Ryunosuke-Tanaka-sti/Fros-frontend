@@ -14,10 +14,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    licenses: [
-      { title: 'AZ-104', period: new Date() },
-      { title: '応用情報' },
-      { title: '基本情報' },
-    ],
+    licenses: [{ title: 'AZ-104', period: new Date() }, { title: '応用情報' }, { title: '基本情報' }],
   },
 };
