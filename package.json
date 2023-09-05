@@ -7,6 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src",
     "story:dev": "storybook dev -p 6006",
     "story:build": "storybook build",
     "gen": "plop"

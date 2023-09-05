@@ -12,15 +12,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const HasImage: Story = {
+export const Primary: Story = {
   args: {
-    title: 'ブログアカウント発行',
-    image: 'https://placehold.jp/150x150.png',
-  },
-};
-
-export const NonImage: Story = {
-  args: {
-    title: 'ブログアカウント発行',
+    title: 'ユーザー情報',
   },
 };

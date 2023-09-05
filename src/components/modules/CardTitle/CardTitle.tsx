@@ -1,16 +1,17 @@
+import { AiFillLock } from 'react-icons/ai';
+
 type CardTitleProps = {
   title: string;
-  image?: string;
 };
 
 export const CardTitle = (props: CardTitleProps) => {
-  const { title, image } = props;
+  const { title } = props;
   return (
     <>
-      <div className="flex flex-row items-center gap-3 font-noto  text-pick-default">
-        {image ? <img src={image} className="h-9 w-9 rounded-full" alt="" /> : <></>}
-        <div className="text-2xl font-bold">{title}</div>
-      </div>
+      <h2 className="flex flex-row items-center gap-3 text-main-default">
+        <AiFillLock className="h-6 w-6" />
+        <span className="font-noto text-2xl font-bold">{title}</span>
+      </h2>
     </>
   );
 };
