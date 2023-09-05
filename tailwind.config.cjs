@@ -9,7 +9,22 @@ module.exports = {
     transparent: 'transparent',
     current: 'currentColor',
     extend: {
+      fontFamily: {
+        noto: 'Noto Sans JP',
+      },
       colors: {
+        main: {
+          default: '#5AAFE1',
+          sub: '#C6E9FC',
+        },
+        error: {
+          default: '#D94F4F',
+          sub: '#F5CDCD',
+        },
+        pick: {
+          default: '#384955',
+          sub: '#9BAEBC',
+        },
         // light mode
         tremor: {
           brand: {
