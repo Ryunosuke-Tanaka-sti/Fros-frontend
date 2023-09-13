@@ -7,7 +7,7 @@ const meta = {
   component: CardContentSkills,
   tags: ['autodocs'],
   argTypes: {
-    rank: {
+    level: {
       control: 'select',
       options: [1, 2, 3, 4],
     },
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    rank: 1,
-    title: 'プログラミング言語',
+    level: 1,
+    name: 'プログラミング言語',
   },
 };

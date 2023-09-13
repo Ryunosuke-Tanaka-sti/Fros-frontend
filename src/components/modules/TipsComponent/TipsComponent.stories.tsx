@@ -3,7 +3,7 @@ import { TipsComponent } from './TipsComponent';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/TipsComponent',
+  title: 'modules/General/TipsComponent',
   component: TipsComponent,
   tags: ['autodocs'],
   argTypes: {},

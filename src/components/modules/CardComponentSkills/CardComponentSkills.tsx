@@ -1,11 +1,9 @@
+import { SkillsType } from '@/types/Skills';
+
 import { CardContentSkills } from '../CardContentSkills/CardContentSkills';
 import { CardTitle } from '../CardTitle/CardTitle';
 
-type CardComponentSkillsProps = {
-  skills: { title: string; rank: 1 | 2 | 3 | 4 }[];
-};
-
-export const CardComponentSkills = (props: CardComponentSkillsProps) => {
+export const CardComponentSkills = (props: SkillsType) => {
   const { skills } = props;
   return (
     <>
@@ -13,8 +11,8 @@ export const CardComponentSkills = (props: CardComponentSkillsProps) => {
         <CardTitle title="ユーザー情報" />
         <div className="h-0.5 w-full bg-pick-sub" />
         <div className="flex flex-col gap-4">
-          {skills.map((skill) => (
-            <CardContentSkills key={skill.title} title={skill.title} rank={skill.rank} />
+          {skills.map((skill, index) => (
+            <CardContentSkills key={index} name={skill.name} level={skill.level} />
           ))}
         </div>
       </div>

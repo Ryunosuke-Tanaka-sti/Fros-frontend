@@ -1,15 +1,15 @@
 import { useForm } from 'react-hook-form';
 
-import { FormItemSkill } from './FormItemSkill';
+import { FormItemAuthority } from './FormItemAuthority';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/FormItem/Skill',
-  component: FormItemSkill,
+  title: 'modules/FormItem/Authority',
+  component: FormItemAuthority,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof FormItemSkill>;
+} satisfies Meta<typeof FormItemAuthority>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -17,15 +17,15 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     onClickDelete: () => null,
-    name: 'select',
+    name: 'name',
   },
   render: function Comp({ ...args }) {
     // 関数コンポーネントを定義
-    const { control } = useForm<{ select: string }>({
+    const { control } = useForm<{ name: string }>({
       defaultValues: {
-        select: '1',
+        name: '1',
       },
     });
-    return <meta.component {...args} control={control} name="select" rules={{}}></meta.component>;
+    return <meta.component {...args} control={control} name="name" rules={{}}></meta.component>;
   },
 };

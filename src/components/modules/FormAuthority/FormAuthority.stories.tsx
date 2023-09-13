@@ -1,17 +1,17 @@
 import { useForm } from 'react-hook-form';
 
-import type { SkillsType } from '@/types/Skills';
+import { AuthoritiesType } from '@/types/Authority';
 
-import { FormSkills } from './FormSkills';
+import { FormAuthority } from './FormAuthority';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/Form/Skills',
-  component: FormSkills,
+  title: 'modules/Form/Authority',
+  component: FormAuthority,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof FormSkills>;
+} satisfies Meta<typeof FormAuthority>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -20,12 +20,11 @@ export const Primary: Story = {
   args: {},
   render: function Comp({ ...args }) {
     // 関数コンポーネントを定義
-    const { control } = useForm<SkillsType>({
+    const { control } = useForm<AuthoritiesType>({
       defaultValues: {
-        skills: [
+        authorities: [
           {
             name: 'HTML',
-            level: 1,
           },
         ],
       },

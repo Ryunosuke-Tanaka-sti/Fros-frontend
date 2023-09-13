@@ -2,16 +2,13 @@ import { useMemo } from 'react';
 
 import { MarkerBar } from '@tremor/react';
 
-type CardContentSkillsProps = {
-  title: string;
-  rank: 1 | 2 | 3 | 4;
-};
+import { SkillType } from '@/types/Skills';
 
-export const CardContentSkills = (props: CardContentSkillsProps) => {
-  const { title, rank } = props;
+export const CardContentSkills = (props: SkillType) => {
+  const { name, level } = props;
 
   const rankRatio = useMemo(() => {
-    switch (rank) {
+    switch (level) {
       case 1:
         return 0;
       case 2:
@@ -23,14 +20,14 @@ export const CardContentSkills = (props: CardContentSkillsProps) => {
       default:
         return 0;
     }
-  }, [rank]);
+  }, [level]);
 
   return (
     <>
       <div className="flex flex-col gap-3 p-2 font-noto  text-pick-default">
         <ul className="flex flex-row items-center justify-between text-lg">
-          <li>{title}</li>
-          <li>{rank}</li>
+          <li>{name}</li>
+          <li>{level}</li>
         </ul>
         <MarkerBar value={rankRatio} color="blue" className="" />
       </div>

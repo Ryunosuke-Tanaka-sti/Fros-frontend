@@ -16,16 +16,16 @@ export const Primary: Story = {
   args: {
     skills: [
       {
-        rank: 1,
-        title: 'HTML',
+        level: 1,
+        name: 'HTML',
       },
       {
-        rank: 2,
-        title: 'CSS',
+        level: 2,
+        name: 'CSS',
       },
       {
-        rank: 4,
-        title: 'Tailwind',
+        level: 4,
+        name: 'Tailwind',
       },
     ],
   },
