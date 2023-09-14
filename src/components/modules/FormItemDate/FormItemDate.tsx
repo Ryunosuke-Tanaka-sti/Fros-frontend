@@ -1,6 +1,5 @@
 import { FieldValues, UseControllerProps, useController } from 'react-hook-form';
 
-import { DatePicker } from '@tremor/react';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import { TipsComponent } from '../TipsComponent/TipsComponent';
@@ -16,8 +15,8 @@ export const FormItemDate = <T extends FieldValues>(props: FormItemDateProps<T>)
   return (
     <>
       <div className="flex flex-row items-center justify-start gap-3">
-        <TipsComponent active={!field.value} onClick={() => field.onChange(null)} />
-        <DatePicker value={field.value} onValueChange={field.onChange} className="w-16" />
+        <TipsComponent active={!field.value} onClick={() => field.onChange('')} />
+        <input type="date" value={field.value} onChange={field.onChange} />
         <AiOutlineClose className="h-6 w-6 hover:cursor-pointer" onClick={onClickDelete} />
       </div>
     </>

@@ -8,12 +8,12 @@ import { FormItemAuthority } from '../FormItemAuthority/FormItemAuthority';
 type FormAuthorityProps<T extends FieldValues> = UseFieldArrayProps<T>;
 
 export const FormAuthority = <T extends FieldValues>(props: FormAuthorityProps<T>) => {
-  const { name, control, rules } = props;
+  const { name, control } = props;
 
-  const { fields, remove, append } = useFieldArray<T>({ name, control, rules });
+  const { fields, remove, append } = useFieldArray<T>({ name, control });
 
   const onChangeSelect = (value: string) => {
-    append({ name: value } as FieldArray<T, ArrayPath<T>>);
+    append([{ name: value } as FieldArray<T, ArrayPath<T>>]);
   };
   return (
     <>

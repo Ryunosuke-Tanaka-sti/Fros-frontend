@@ -24,11 +24,7 @@ export const Primary: Story = {
     // 関数コンポーネントを定義
     const { control } = useForm<AuthoritiesType>({
       defaultValues: {
-        authorities: [
-          {
-            name: 'HTML',
-          },
-        ],
+        authorities: [],
       },
     });
     return <meta.component {...args} name="authorities" control={control}></meta.component>;

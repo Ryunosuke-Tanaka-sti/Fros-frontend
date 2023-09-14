@@ -17,7 +17,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    name: 'certifications',
+  },
   render: function Comp({ ...args }) {
     // 関数コンポーネントを定義
     const { control } = useForm<CertificationsType>({
@@ -29,6 +31,6 @@ export const Primary: Story = {
         ],
       },
     });
-    return <meta.component {...args} control={control}></meta.component>;
+    return <meta.component {...args} name="certifications" control={control}></meta.component>;
   },
 };
