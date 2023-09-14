@@ -1,25 +1,21 @@
-import { Control, useFieldArray } from 'react-hook-form';
+import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldArray } from 'react-hook-form';
 
 import { Select, SelectItem } from '@tremor/react';
-
-import { CertificationsType } from '@/types/Licenses';
 
 import { CardTitle } from '../CardTitle/CardTitle';
 import { FormItemDate } from '../FormItemDate/FormItemDate';
 import { FormItemLabel } from '../FormItemLabel/FormItemLabel';
 
-type FormLicenseProps = {
-  control?: Control<CertificationsType>;
-};
+type FormLicenseProps<T extends FieldValues> = UseFieldArrayProps<T>;
+export const FormLicense = <T extends FieldValues>(props: FormLicenseProps<T>) => {
+  const { name, control, rules } = props;
 
-export const FormLicense = (props: FormLicenseProps) => {
-  const name = 'certifications';
-  const { control } = props;
-
-  const { fields, remove, append } = useFieldArray<CertificationsType>({ name, control });
+  const { fields, remove, append } = useFieldArray<T>({ name, control, rules });
 
   const onChangeSelect = (value: string) => {
-    append({ name: value, period: undefined });
+    const appendData = { name: value, period: undefined } as FieldArray<T, ArrayPath<T>>;
+
+    append(appendData);
   };
 
   return (
@@ -36,8 +32,8 @@ export const FormLicense = (props: FormLicenseProps) => {
         <div className="flex w-full flex-col items-center gap-3">
           {fields.map((field, index) => (
             <div className="flex w-full flex-row items-center justify-between" key={field.id}>
-              <FormItemLabel control={control} name={`${name}.${index}.name`} />
-              <FormItemDate onClickDelete={() => remove(index)} control={control} name={`${name}.${index}.period`} />
+              <FormItemLabel control={control} name={`${name}.${index}.name` as Path<T>} />
+              <FormItemDate onClickDelete={() => remove(index)} control={control} name={`${name}.${index}.period` as Path<T>} />
             </div>
           ))}
         </div>

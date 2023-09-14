@@ -17,7 +17,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    name: 'skills',
+  },
   render: function Comp({ ...args }) {
     // 関数コンポーネントを定義
     const { control } = useForm<SkillsType>({
@@ -25,11 +27,11 @@ export const Primary: Story = {
         skills: [
           {
             name: 'HTML',
-            level: 1,
+            level: '1',
           },
         ],
       },
     });
-    return <meta.component {...args} control={control}></meta.component>;
+    return <meta.component {...args} name="skills" control={control}></meta.component>;
   },
 };

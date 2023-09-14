@@ -1,25 +1,21 @@
-import { Control, useFieldArray } from 'react-hook-form';
+import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldArray } from 'react-hook-form';
 
 import { Select, SelectItem } from '@tremor/react';
-
-import type { SkillsType } from '@/types/Skills';
 
 import { CardTitle } from '../CardTitle/CardTitle';
 import { FormItemLabel } from '../FormItemLabel/FormItemLabel';
 import { FormItemSkill } from '../FormItemSkill/FormItemSkill';
 
-type FormSkillsProps = {
-  control?: Control<SkillsType>;
-};
+type FormSkillsProps<T extends FieldValues> = UseFieldArrayProps<T>;
 
-export const FormSkills = (props: FormSkillsProps) => {
-  const name = 'skills';
-  const { control } = props;
+export const FormSkills = <T extends FieldValues>(props: FormSkillsProps<T>) => {
+  const { name, control, rules } = props;
 
-  const { fields, remove, append } = useFieldArray<SkillsType>({ name, control });
+  const { fields, remove, append } = useFieldArray<T>({ name, control, rules });
 
   const onChangeSelect = (value: string) => {
-    append({ level: 1, name: value });
+    const appendData = { name: value, level: '1' } as FieldArray<T, ArrayPath<T>>;
+    append(appendData);
   };
 
   return (
@@ -42,8 +38,8 @@ export const FormSkills = (props: FormSkillsProps) => {
         <div className="flex w-full flex-col items-center gap-3">
           {fields.map((field, index) => (
             <div className="flex w-full flex-row items-center justify-between" key={field.id}>
-              <FormItemLabel control={control} name={`${name}.${index}.name`} />
-              <FormItemSkill onClickDelete={() => remove(index)} control={control} name={`${name}.${index}.level`} />
+              <FormItemLabel control={control} name={`${name}.${index}.name` as Path<T>} />
+              <FormItemSkill onClickDelete={() => remove(index)} control={control} name={`${name}.${index}.level` as Path<T>} />
             </div>
           ))}
         </div>
