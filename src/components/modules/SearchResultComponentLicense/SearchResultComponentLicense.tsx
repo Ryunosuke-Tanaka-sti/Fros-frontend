@@ -3,17 +3,19 @@ import { CardContentTitle } from '../CardContentTitle/CardContentTitle';
 import { DividerComponent } from '../Divider/Divider';
 
 type SearchResultComponentLicenseProps = {
-  label?: string;
+  name: string;
+  license: string;
+  period?: Date;
 };
 
 export const SearchResultComponentLicense = (props: SearchResultComponentLicenseProps) => {
-  const {} = props;
+  const { name, license, period } = props;
   return (
     <>
       <div className="flex max-w-md flex-col gap-3 rounded-lg border-2 border-main-sub p-4">
-        <CardContentTitle title="ブログアカウント発行" />
+        <CardContentTitle title={name} />
         <DividerComponent />
-        <CardContentLicense title="AZ-104" />
+        <CardContentLicense title={license} period={period} />
       </div>
     </>
   );
