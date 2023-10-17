@@ -1,4 +1,4 @@
-import { SearchResultComponentCertification } from './SearchResultComponentLicense';
+import { SearchResultComponentCertification } from './SearchResultComponentCertification';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -15,14 +15,13 @@ type Story = StoryObj<typeof meta>;
 export const HasNotPeriod: Story = {
   args: {
     name: 'Tanaka Ryunosuke',
-    Certification: 'AZ-104',
+    certification: { id: 'xxx', name: 'wwww' },
   },
 };
 
 export const HasPeriod: Story = {
   args: {
     name: 'Tanaka Ryunosuke',
-    Certification: 'AZ-104',
-    period: new Date(),
+    certification: { id: 'xxx', name: 'wwww', expiration: new Date() },
   },
 };
