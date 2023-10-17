@@ -30,15 +30,15 @@ export default function (
           },
         ];
       }
-      if (componentType == 'pages') {
-        return [
-          {
-            type: 'add',
-            path: 'src/components/pages/{{name}}.tsx',
-            templateFile: 'plop-templates/page-component.tsx.hbs',
-          },
-        ];
-      }
+      // if (componentType == 'pages') {
+      //   return [
+      //     {
+      //       type: 'add',
+      //       path: 'src/components/pages/{{name}}.tsx',
+      //       templateFile: 'plop-templates/page-component.tsx.hbs',
+      //     },
+      //   ];
+      // }
 
       const componentPath = `src/components/${componentType}/${componentName}/`;
       return [

@@ -4,5 +4,5 @@ export type SkillsType = {
 
 export type SkillType = {
   name: string;
-  level: string;
+  level: number;
 };
