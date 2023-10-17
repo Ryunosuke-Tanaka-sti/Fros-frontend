@@ -1,3 +1,8 @@
 export type AuthoritiesType = {
-  authorities: { name: string }[];
+  authorities: AuthorityType[];
+};
+
+export type AuthorityType = {
+  id: string;
+  name: string;
 };

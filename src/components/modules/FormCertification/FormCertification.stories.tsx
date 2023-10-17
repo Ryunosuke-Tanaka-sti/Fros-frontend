@@ -1,17 +1,17 @@
 import { useForm } from 'react-hook-form';
 
-import { CertificationsType } from '@/types/Licenses';
+import { CertificationsType } from '@/types/Certification';
 
-import { FormLicense } from './FormLicense';
+import { FormCertification } from './FormCertification';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'modules/Form/License',
-  component: FormLicense,
+  title: 'modules/Form/Certification',
+  component: FormCertification,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof FormLicense>;
+} satisfies Meta<typeof FormCertification>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

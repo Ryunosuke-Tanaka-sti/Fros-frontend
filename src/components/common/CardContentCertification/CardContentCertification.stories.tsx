@@ -1,10 +1,10 @@
-import { CardContentLicense } from './CardContentLicense';
+import { CardContentCertification } from './CardContentCertification';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'common/CardContent/License',
-  component: CardContentLicense,
+  title: 'common/CardContent/Certification',
+  component: CardContentCertification,
   tags: ['autodocs'],
   argTypes: {
     // period: {
@@ -12,7 +12,7 @@ const meta = {
     // },
     // Unixタイムが渡されるのでエラー
   },
-} satisfies Meta<typeof CardContentLicense>;
+} satisfies Meta<typeof CardContentCertification>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

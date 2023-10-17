@@ -1,21 +1,21 @@
-import { CardContentLicense } from '@/components/common/CardContentLicense/CardContentLicense';
+import { CardContentCertification } from '@/components/common/CardContentCertification/CardContentCertification';
 import { CardContentTitle } from '@/components/common/CardContentTitle/CardContentTitle';
 import { DividerComponent } from '@/components/common/Divider/Divider';
 
-type SearchResultComponentLicenseProps = {
+type SearchResultComponentCertificationProps = {
   name: string;
-  license: string;
+  Certification: string;
   period?: Date;
 };
 
-export const SearchResultComponentLicense = (props: SearchResultComponentLicenseProps) => {
-  const { name, license, period } = props;
+export const SearchResultComponentCertification = (props: SearchResultComponentCertificationProps) => {
+  const { name, Certification, period } = props;
   return (
     <>
       <div className="flex max-w-md flex-col gap-3 rounded-lg border-2 border-main-sub p-4">
         <CardContentTitle title={name} />
         <DividerComponent />
-        <CardContentLicense title={license} period={period} />
+        <CardContentCertification title={Certification} period={period} />
       </div>
     </>
   );

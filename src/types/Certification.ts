@@ -2,6 +2,7 @@ export type CertificationsType = {
   certifications: CertificationType[];
 };
 type CertificationType = {
+  id: string;
   name: string;
-  period?: Date;
+  expiration?: Date;
 };

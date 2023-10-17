@@ -1,11 +1,11 @@
 import { TipsComponent } from '@/components/common/TipsComponent/TipsComponent';
 
-type CardContentLicenseProps = {
+type CardContentCertificationProps = {
   title: string;
   period?: Date;
 };
 
-export const CardContentLicense = (props: CardContentLicenseProps) => {
+export const CardContentCertification = (props: CardContentCertificationProps) => {
   const { title, period } = props;
   const dateFormate = (date: Date) => {
     return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;

@@ -6,8 +6,8 @@ import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemDate } from '@/components/common/FormItemDate/FormItemDate';
 import { FormItemLabel } from '@/components/common/FormItemLabel/FormItemLabel';
 
-type FormLicenseProps<T extends FieldValues> = UseFieldArrayProps<T>;
-export const FormLicense = <T extends FieldValues>(props: FormLicenseProps<T>) => {
+type FormCertificationProps<T extends FieldValues> = UseFieldArrayProps<T>;
+export const FormCertification = <T extends FieldValues>(props: FormCertificationProps<T>) => {
   const { name, control, rules } = props;
 
   const { fields, remove, append } = useFieldArray<T>({ name, control, rules });
