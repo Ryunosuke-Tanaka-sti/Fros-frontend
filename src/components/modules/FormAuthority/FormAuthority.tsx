@@ -2,8 +2,8 @@ import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldA
 
 import { Select, SelectItem } from '@tremor/react';
 
-import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemAuthority } from '@/components/common/FormItemAuthority/FormItemAuthority';
+import { Title } from '@/components/common/Title/Title';
 
 type FormAuthorityProps<T extends FieldValues> = UseFieldArrayProps<T>;
 
@@ -18,7 +18,7 @@ export const FormAuthority = <T extends FieldValues>(props: FormAuthorityProps<T
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">
-        <CardTitle title="スキル" />
+        <Title title="スキル" />
         <div className="h-0.5 w-full bg-pick-sub" />
         <Select onValueChange={onChangeSelect}>
           <SelectItem value="HTML" />

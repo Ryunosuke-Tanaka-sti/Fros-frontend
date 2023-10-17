@@ -2,9 +2,9 @@ import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldA
 
 import { Select, SelectItem } from '@tremor/react';
 
-import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemDate } from '@/components/common/FormItemDate/FormItemDate';
 import { FormItemLabel } from '@/components/common/FormItemLabel/FormItemLabel';
+import { Title } from '@/components/common/Title/Title';
 
 type FormCertificationProps<T extends FieldValues> = UseFieldArrayProps<T>;
 export const FormCertification = <T extends FieldValues>(props: FormCertificationProps<T>) => {
@@ -21,7 +21,7 @@ export const FormCertification = <T extends FieldValues>(props: FormCertificatio
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">
-        <CardTitle title="資格" />
+        <Title title="資格" />
         <div className="h-0.5 w-full bg-pick-sub" />
         <Select onValueChange={onChangeSelect}>
           <SelectItem value="HTML" />

@@ -4,8 +4,13 @@ import { MarkerBar } from '@tremor/react';
 
 import { SkillType } from '@/types/Skills';
 
-export const CardContentSkills = (props: SkillType) => {
-  const { name, level } = props;
+type CardContentSkillsType = {
+  skill: SkillType;
+};
+
+export const CardContentSkills = (props: CardContentSkillsType) => {
+  const { skill } = props;
+  const { name, level } = skill;
 
   const rankRatio = useMemo(() => {
     switch (level) {

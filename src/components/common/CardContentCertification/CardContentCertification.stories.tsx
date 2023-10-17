@@ -19,13 +19,19 @@ type Story = StoryObj<typeof meta>;
 
 export const IndefinitePeriod: Story = {
   args: {
-    title: '資格',
+    certification: {
+      id: 'xxx',
+      name: 'title',
+      expiration: new Date(),
+    },
   },
 };
 
 export const HasPeriod: Story = {
   args: {
-    title: '資格',
-    period: new Date(),
+    certification: {
+      id: 'xxx',
+      name: 'title',
+    },
   },
 };

@@ -2,9 +2,9 @@ import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldA
 
 import { Select, SelectItem } from '@tremor/react';
 
-import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemLabel } from '@/components/common/FormItemLabel/FormItemLabel';
 import { FormItemSkill } from '@/components/common/FormItemSkill/FormItemSkill';
+import { Title } from '@/components/common/Title/Title';
 
 type FormSkillsProps<T extends FieldValues> = UseFieldArrayProps<T>;
 
@@ -21,7 +21,7 @@ export const FormSkills = <T extends FieldValues>(props: FormSkillsProps<T>) => 
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">
-        <CardTitle title="スキル" />
+        <Title title="スキル" />
         <div className="h-0.5 w-full bg-pick-sub" />
         <ul className="gap-1 text-xs">
           <li>レベル4:最上級 新たな技術を開発できる</li>

@@ -1,6 +1,6 @@
 import { CardContentSkills } from '@/components/common/CardContentSkills/CardContentSkills';
-import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { DividerComponent } from '@/components/common/Divider/Divider';
+import { Title } from '@/components/common/Title/Title';
 import { SkillsType } from '@/types/Skills';
 
 export const CardComponentSkills = (props: SkillsType) => {
@@ -8,11 +8,11 @@ export const CardComponentSkills = (props: SkillsType) => {
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">
-        <CardTitle title="ユーザー情報" />
+        <Title title="ユーザー情報" />
         <DividerComponent />
         <div className="flex flex-col gap-4">
-          {skills.map((skill, index) => (
-            <CardContentSkills key={index} name={skill.name} level={skill.level} />
+          {skills.map((skill) => (
+            <CardContentSkills key={skill.id} skill={skill} />
           ))}
         </div>
       </div>

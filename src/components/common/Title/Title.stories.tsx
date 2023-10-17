@@ -1,13 +1,13 @@
-import { CardTitle } from './CardTitle';
+import { Title } from './Title';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'common/CardContent/Title',
-  component: CardTitle,
+  title: 'common/General/Title',
+  component: Title,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof CardTitle>;
+} satisfies Meta<typeof Title>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
