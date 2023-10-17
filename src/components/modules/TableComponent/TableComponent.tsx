@@ -1,7 +1,7 @@
 import { Table, TableBody } from '@tremor/react';
 
-import { TableContent } from '../TableContent/TableContent';
-import { TableHeader } from '../TableHeader/TableHeader';
+import { TableContent } from '@/components/common/TableContent/TableContent';
+import { TableHeader } from '@/components/common/TableHeader/TableHeader';
 
 type TableComponentProps = {
   label?: string;

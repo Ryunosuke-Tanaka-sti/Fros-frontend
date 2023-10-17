@@ -2,9 +2,9 @@ import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldA
 
 import { Select, SelectItem } from '@tremor/react';
 
-import { CardTitle } from '../CardTitle/CardTitle';
-import { FormItemLabel } from '../FormItemLabel/FormItemLabel';
-import { FormItemSkill } from '../FormItemSkill/FormItemSkill';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
+import { FormItemLabel } from '@/components/common/FormItemLabel/FormItemLabel';
+import { FormItemSkill } from '@/components/common/FormItemSkill/FormItemSkill';
 
 type FormSkillsProps<T extends FieldValues> = UseFieldArrayProps<T>;
 

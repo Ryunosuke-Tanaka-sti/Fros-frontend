@@ -1,6 +1,6 @@
-import { CardContentLicense } from '../CardContentLicense/CardContentLicense';
-import { CardContentTitle } from '../CardContentTitle/CardContentTitle';
-import { DividerComponent } from '../Divider/Divider';
+import { CardContentLicense } from '@/components/common/CardContentLicense/CardContentLicense';
+import { CardContentTitle } from '@/components/common/CardContentTitle/CardContentTitle';
+import { DividerComponent } from '@/components/common/Divider/Divider';
 
 type SearchResultComponentLicenseProps = {
   name: string;

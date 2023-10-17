@@ -1,6 +1,6 @@
-import { CardContentNormal } from '../CardContentNormal/CardContentNormal';
-import { CardTitle } from '../CardTitle/CardTitle';
-import { DividerComponent } from '../Divider/Divider';
+import { CardContentNormal } from '@/components/common/CardContentNormal/CardContentNormal';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
+import { DividerComponent } from '@/components/common/Divider/Divider';
 
 type CardComponentUserProps = {
   name: string;

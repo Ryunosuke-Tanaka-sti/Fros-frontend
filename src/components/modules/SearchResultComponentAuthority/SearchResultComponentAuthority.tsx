@@ -1,6 +1,6 @@
-import { CardContentTitle } from '../CardContentTitle/CardContentTitle';
-import { CardContentUser } from '../CardContentUser/CardContentUser';
-import { DividerComponent } from '../Divider/Divider';
+import { CardContentTitle } from '@/components/common/CardContentTitle/CardContentTitle';
+import { CardContentUser } from '@/components/common/CardContentUser/CardContentUser';
+import { DividerComponent } from '@/components/common/Divider/Divider';
 
 type SearchResultComponentAuthorityProps = {
   title: string;

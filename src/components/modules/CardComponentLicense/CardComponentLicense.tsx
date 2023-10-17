@@ -1,6 +1,6 @@
-import { CardContentLicense } from '../CardContentLicense/CardContentLicense';
-import { CardTitle } from '../CardTitle/CardTitle';
-import { DividerComponent } from '../Divider/Divider';
+import { CardContentLicense } from '@/components/common/CardContentLicense/CardContentLicense';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
+import { DividerComponent } from '@/components/common/Divider/Divider';
 
 type CardComponentLicenseProps = {
   licenses: { title: string; period?: Date }[];

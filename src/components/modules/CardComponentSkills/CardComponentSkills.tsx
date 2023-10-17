@@ -1,8 +1,7 @@
+import { CardContentSkills } from '@/components/common/CardContentSkills/CardContentSkills';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
+import { DividerComponent } from '@/components/common/Divider/Divider';
 import { SkillsType } from '@/types/Skills';
-
-import { CardContentSkills } from '../CardContentSkills/CardContentSkills';
-import { CardTitle } from '../CardTitle/CardTitle';
-import { DividerComponent } from '../Divider/Divider';
 
 export const CardComponentSkills = (props: SkillsType) => {
   const { skills } = props;

@@ -1,4 +1,4 @@
-import { CardContentTitle } from '../CardContentTitle/CardContentTitle';
+import { CardContentTitle } from '@/components/common/CardContentTitle/CardContentTitle';
 
 type SearchResultComponentUserProps = {
   name: string;

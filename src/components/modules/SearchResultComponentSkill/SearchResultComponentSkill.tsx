@@ -1,8 +1,7 @@
+import { CardContentSkills } from '@/components/common/CardContentSkills/CardContentSkills';
+import { CardContentTitle } from '@/components/common/CardContentTitle/CardContentTitle';
+import { DividerComponent } from '@/components/common/Divider/Divider';
 import { SkillType } from '@/types/Skills';
-
-import { CardContentSkills } from '../CardContentSkills/CardContentSkills';
-import { CardContentTitle } from '../CardContentTitle/CardContentTitle';
-import { DividerComponent } from '../Divider/Divider';
 
 type SearchResultComponentSkillProps = {
   name: string;

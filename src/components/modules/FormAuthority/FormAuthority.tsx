@@ -2,8 +2,8 @@ import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldA
 
 import { Select, SelectItem } from '@tremor/react';
 
-import { CardTitle } from '../CardTitle/CardTitle';
-import { FormItemAuthority } from '../FormItemAuthority/FormItemAuthority';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
+import { FormItemAuthority } from '@/components/common/FormItemAuthority/FormItemAuthority';
 
 type FormAuthorityProps<T extends FieldValues> = UseFieldArrayProps<T>;
 

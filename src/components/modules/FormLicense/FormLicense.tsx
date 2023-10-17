@@ -2,9 +2,9 @@ import { ArrayPath, FieldArray, FieldValues, Path, UseFieldArrayProps, useFieldA
 
 import { Select, SelectItem } from '@tremor/react';
 
-import { CardTitle } from '../CardTitle/CardTitle';
-import { FormItemDate } from '../FormItemDate/FormItemDate';
-import { FormItemLabel } from '../FormItemLabel/FormItemLabel';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
+import { FormItemDate } from '@/components/common/FormItemDate/FormItemDate';
+import { FormItemLabel } from '@/components/common/FormItemLabel/FormItemLabel';
 
 type FormLicenseProps<T extends FieldValues> = UseFieldArrayProps<T>;
 export const FormLicense = <T extends FieldValues>(props: FormLicenseProps<T>) => {
