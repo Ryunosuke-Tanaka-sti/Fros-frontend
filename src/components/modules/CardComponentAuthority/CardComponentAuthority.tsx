@@ -1,21 +1,18 @@
 import { DividerComponent } from '@/components/common/Divider/Divider';
 import { Title } from '@/components/common/Title/Title';
+import { AuthoritiesType } from '@/types/Authority';
 
-type CardComponentAuthorityProps = {
-  authorityList: string[];
-};
-
-export const CardComponentAuthority = (props: CardComponentAuthorityProps) => {
-  const { authorityList } = props;
+export const CardComponentAuthority = (props: AuthoritiesType) => {
+  const { authorities } = props;
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">
-        <Title title="ユーザー情報" />
+        <Title title="資格" />
         <DividerComponent />
         <div className="flex flex-col gap-4">
-          {authorityList.map((authority) => (
-            <span className="font-noto text-lg" key={authority}>
-              {authority}
+          {authorities.map((authority) => (
+            <span className="font-noto text-lg" key={authority.id}>
+              {authority.name}
             </span>
           ))}
         </div>

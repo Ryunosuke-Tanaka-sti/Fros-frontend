@@ -1,21 +1,15 @@
-import { useMemo } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { CardComponentAuthority } from '@/components/modules/CardComponentAuthority/CardComponentAuthority';
 import { CardComponentCertification } from '@/components/modules/CardComponentCertification/CardComponentCertification';
 import { CardComponentSkills } from '@/components/modules/CardComponentSkills/CardComponentSkills';
 import { CardComponentUser } from '@/components/modules/CardComponentUser/CardComponentUser';
-import { useAuth } from '@/hooks/useAuth';
 import { AuthorityType } from '@/types/Authority';
 import { CertificationType } from '@/types/Certification';
 import { SkillType } from '@/types/Skills';
 import { UserInfoType } from '@/types/User';
 
-export const UserPage = () => {
-  const { uid } = useAuth();
-  const { id } = useParams();
-  const ownFlag = useMemo(() => uid == id, [uid, id]);
-
+export const OwnPage = () => {
   const navigate = useNavigate();
   const onClickEditPage = () => {
     navigate('/profile/edit');
@@ -66,7 +60,7 @@ export const UserPage = () => {
 
   return (
     <div className="mx-7 my-5 flex w-full flex-row items-start justify-center gap-3">
-      <CardComponentUser userInfo={userInfo} ownFlag={ownFlag} onClick={onClickEditPage} />
+      <CardComponentUser userInfo={userInfo} ownFlag={true} onClick={onClickEditPage} />
       <div className="flex max-w-3xl grow flex-col gap-9">
         <CardComponentSkills skills={skills} />
         <CardComponentCertification certifications={certifications} />

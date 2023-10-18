@@ -14,6 +14,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    authorityList: ['ブログアカウント発行', 'GitHubアカウント発行'],
+    authorities: [
+      {
+        id: 'xxxx',
+        name: 'ブログアカウント発行',
+      },
+      {
+        id: 'yyyyy',
+        name: 'ブログアカウント発行',
+      },
+    ],
   },
 };

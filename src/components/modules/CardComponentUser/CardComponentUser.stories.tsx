@@ -15,7 +15,10 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     name: 'Tanaka Ryunosuke',
-    mail: 'ry-tanaka@sios.com',
-    affiliation: 'PS',
+    email: 'ry-tanaka@sios.com',
+    service_line: 'PS',
+    image: 'https://placehold.jp/150x150.png',
+    id: 'xxxxx',
+    isAdmin: false,
   },
 };
