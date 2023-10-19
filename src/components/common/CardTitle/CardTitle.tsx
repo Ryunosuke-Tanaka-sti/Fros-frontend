@@ -4,7 +4,7 @@ type CardTitleProps = {
   title: string;
 };
 
-export const Title = (props: CardTitleProps) => {
+export const CardTitle = (props: CardTitleProps) => {
   const { title } = props;
   return (
     <>

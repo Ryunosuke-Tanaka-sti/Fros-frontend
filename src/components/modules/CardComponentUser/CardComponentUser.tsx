@@ -1,7 +1,7 @@
 import { ButtonComponent } from '@/components/common/ButtonComponent/ButtonComponent';
 import { CardContentNormal } from '@/components/common/CardContentNormal/CardContentNormal';
+import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { DividerComponent } from '@/components/common/Divider/Divider';
-import { Title } from '@/components/common/Title/Title';
 import { UserInfoType } from '@/types/User';
 
 type CardComponentUserType = {
@@ -17,7 +17,7 @@ export const CardComponentUser = (props: CardComponentUserType) => {
     <>
       <div className="flex w-96 flex-col items-center gap-3 rounded-lg border-4 border-main-sub p-3">
         <img src={image} className="h-[300px] w-[300px] rounded-full object-contain" alt="" />
-        <Title title="ユーザー情報" />
+        <CardTitle title="ユーザー情報" />
         <DividerComponent />
         <div className="flex w-full flex-col gap-2">
           <CardContentNormal content={name} title="名前" />

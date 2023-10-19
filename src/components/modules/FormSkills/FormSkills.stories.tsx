@@ -1,7 +1,3 @@
-import { useForm } from 'react-hook-form';
-
-import type { SkillsType } from '@/types/Skills';
-
 import { FormSkills } from './FormSkills';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -18,20 +14,32 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    name: 'skills',
-  },
-  render: function Comp({ ...args }) {
-    // 関数コンポーネントを定義
-    const { control } = useForm<SkillsType>({
-      defaultValues: {
-        skills: [
-          {
-            name: 'HTML',
-            level: '1',
-          },
-        ],
+    skills: {
+      skills: [
+        {
+          id: 'xxxxx',
+          level: 1,
+          name: 'HTML',
+        },
+      ],
+    },
+    skillsList: [
+      {
+        id: 'xxxxx',
+        level: 1,
+        name: 'HTML',
       },
-    });
-    return <meta.component {...args} name="skills" control={control}></meta.component>;
+      {
+        id: 'yyyyy',
+        level: 1,
+        name: 'CSS',
+      },
+      {
+        id: 'zzzzz',
+        level: 1,
+        name: 'React',
+      },
+    ],
+    onSubmitSkills: () => null,
   },
 };

@@ -1,8 +1,4 @@
-import { useForm } from 'react-hook-form';
-
-import { AuthoritiesType } from '@/types/Authority';
-
-import { FormAuthority } from './FormAuthority';
+import { FormAuthority } from '@/components/modules/FormAuthority/FormAuthority';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -18,15 +14,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    name: 'authorities',
-  },
-  render: function Comp({ ...args }) {
-    // 関数コンポーネントを定義
-    const { control } = useForm<AuthoritiesType>({
-      defaultValues: {
-        authorities: [],
-      },
-    });
-    return <meta.component {...args} name="authorities" control={control}></meta.component>;
+    authorities: {
+      authorities: [],
+    },
+    authoritiesList: [{ id: 'xxx', name: 'HTML' }],
+    onSubmitAuthority: () => null,
   },
 };

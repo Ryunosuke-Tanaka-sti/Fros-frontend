@@ -1,7 +1,3 @@
-import { useForm } from 'react-hook-form';
-
-import { CertificationsType } from '@/types/Certification';
-
 import { FormCertification } from './FormCertification';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -18,19 +14,32 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    name: 'certifications',
-  },
-  render: function Comp({ ...args }) {
-    // 関数コンポーネントを定義
-    const { control } = useForm<CertificationsType>({
-      defaultValues: {
-        certifications: [
-          {
-            name: 'HTML',
-          },
-        ],
+    certifications: {
+      certifications: [
+        {
+          id: 'xxxx',
+          name: 'HTML',
+        },
+      ],
+    },
+    certificationsList: [
+      {
+        id: 'xxxx',
+        name: 'HTML',
       },
-    });
-    return <meta.component {...args} name="certifications" control={control}></meta.component>;
+      {
+        id: 'xxxx',
+        name: 'HTML',
+      },
+      {
+        id: 'xxxx',
+        name: 'HTML',
+      },
+      {
+        id: 'xxxx',
+        name: 'HTML',
+      },
+    ],
+    onSubmitCertification: () => null,
   },
 };
