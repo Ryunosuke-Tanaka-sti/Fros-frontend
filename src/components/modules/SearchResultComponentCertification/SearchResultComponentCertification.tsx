@@ -12,7 +12,7 @@ export const SearchResultComponentCertification = (props: SearchResultComponentC
   const { name, certification } = props;
   return (
     <>
-      <div className="flex max-w-md flex-col gap-3 rounded-lg border-2 border-main-sub p-4">
+      <div className="flex w-full max-w-md flex-col gap-3 rounded-lg border-2 border-main-sub p-4">
         <CardContentTitle title={name} />
         <DividerComponent />
         <CardContentCertification certification={certification} />

@@ -9,7 +9,7 @@ export const TableContent = (props: TableContentProps) => {
   return (
     <TableRow>
       {contents.map((value, index) => (
-        <TableCell key={index} className={index == 0 ? 'sticky left-0 bg-white' : ''}>
+        <TableCell key={index} className={index == 0 ? 'sticky left-0 z-10 bg-white' : ' text-center'}>
           {value}
         </TableCell>
       ))}

@@ -4,8 +4,8 @@ import { CardComponentAuthority } from '@/components/modules/CardComponentAuthor
 import { CardComponentCertification } from '@/components/modules/CardComponentCertification/CardComponentCertification';
 import { CardComponentSkills } from '@/components/modules/CardComponentSkills/CardComponentSkills';
 import { CardComponentUser } from '@/components/modules/CardComponentUser/CardComponentUser';
-import { AuthorityType } from '@/types/Authority';
 import { CertificationType } from '@/types/Certification';
+import { NameToID } from '@/types/Common';
 import { SkillType } from '@/types/Skills';
 import { UserInfoType } from '@/types/User';
 
@@ -42,7 +42,7 @@ export const OwnPage = () => {
     },
   ];
 
-  const authorities: AuthorityType[] = [
+  const authorities: NameToID[] = [
     {
       id: 'xxxx',
       name: 'ブログアカウント発行',

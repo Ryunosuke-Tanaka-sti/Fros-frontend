@@ -10,7 +10,7 @@ export const Layout = () => {
   return (
     <>
       <HeaderComponent onClickNavigate={onClickNavigate} />
-      <main className="flex grow flex-col">
+      <main className="flex grow flex-col px-7">
         <RouteHasAuthenticated>
           <Outlet />
         </RouteHasAuthenticated>

@@ -14,11 +14,30 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    name: 'Tanaka Ryunosuke',
-    email: 'ry-tanaka@sios.com',
-    service_line: 'PS',
-    image: 'https://placehold.jp/150x150.png',
-    id: 'xxxxx',
-    isAdmin: false,
+    userInfo: {
+      name: 'Tanaka Ryunosuke',
+      email: 'ry-tanaka@sios.com',
+      service_line: 'PS',
+      image: 'https://placehold.jp/150x150.png',
+      id: 'xxxxx',
+      isAdmin: false,
+    },
+    ownFlag: false,
+    onClick: () => null,
+  },
+};
+
+export const NonEdit: Story = {
+  args: {
+    userInfo: {
+      name: 'Tanaka Ryunosuke',
+      email: 'ry-tanaka@sios.com',
+      service_line: 'PS',
+      image: 'https://placehold.jp/150x150.png',
+      id: 'xxxxx',
+      isAdmin: false,
+    },
+    ownFlag: true,
+    onClick: () => null,
   },
 };

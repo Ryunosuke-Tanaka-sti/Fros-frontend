@@ -7,6 +7,7 @@ import { OwnPage } from '@/components/pages/OwnPage';
 import { SearchAuthorityPage } from '@/components/pages/SearchAuthorityPage';
 import { SearchCertificationPage } from '@/components/pages/SearchCertificationPage';
 import { SearchSkillPage } from '@/components/pages/SearchSkillPage';
+import { SearchSummaryPage } from '@/components/pages/SearchSummaryPage';
 import { SearchUserPage } from '@/components/pages/SearchUserPage';
 import { UserPage } from '@/components/pages/UserPage';
 
@@ -15,17 +16,16 @@ export const RouterConfig = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<SearchLayout />}>
-          <Route index element={<SearchUserPage />} />
+          <Route index element={<SearchSummaryPage />} />
+          <Route path="user" element={<SearchUserPage />} />
           <Route path="skill" element={<SearchSkillPage />} />
           <Route path="authority" element={<SearchAuthorityPage />} />
           <Route path="certification" element={<SearchCertificationPage />} />
         </Route>
-        <Route path=":id" element={<Outlet />}>
-          <Route index element={<UserPage />} />
-        </Route>
         <Route path="profile" element={<Outlet />}>
           <Route index element={<OwnPage />} />
           <Route path="edit" element={<OwnEditPage />} />
+          <Route path=":id" element={<UserPage />} />
         </Route>
       </Route>
     </Routes>

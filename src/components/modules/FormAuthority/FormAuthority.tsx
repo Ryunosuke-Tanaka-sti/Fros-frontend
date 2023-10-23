@@ -6,12 +6,13 @@ import { Select, SelectItem } from '@tremor/react';
 import { ButtonComponent } from '@/components/common/ButtonComponent/ButtonComponent';
 import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemAuthority } from '@/components/common/FormItemAuthority/FormItemAuthority';
-import { AuthoritiesType, AuthorityType } from '@/types/Authority';
+import { AuthoritiesType } from '@/types/Authority';
+import { NameToID } from '@/types/Common';
 
 type FormAuthorityProps = {
   authorities: AuthoritiesType;
   onSubmitAuthority: (authorities: AuthoritiesType) => void;
-  authoritiesList: AuthorityType[];
+  authoritiesList: NameToID[];
 };
 
 export const FormAuthority = (props: FormAuthorityProps) => {

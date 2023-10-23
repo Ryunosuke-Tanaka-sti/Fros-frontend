@@ -34,13 +34,42 @@ export const TableComponent = (props: TableComponentProps) => {
     'React',
     'Vue',
     'Tailwind',
+    'CSS',
+    'React',
+    'Vue',
+    'Tailwind',
+    'CSS',
+    'React',
+    'Vue',
+    'Tailwind',
+    'CSS',
+    'React',
+    'Vue',
+    'Tailwind',
+    'CSS',
+    'React',
+    'Vue',
+    'Tailwind',
   ];
   const content = ['Tanaka Ryunosuke', '1', '1', '2', '3', '4', '5', '6', '7', '90', '0', '3', '2', '32', '2', '3', '3', '23', '3', '1', '3', '2', '2', '3'];
   return (
     <>
-      <Table>
+      <Table className="max-h-[600px]">
         <TableHeader header={header} />
         <TableBody>
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
+          <TableContent contents={content} />
           <TableContent contents={content} />
           <TableContent contents={content} />
           <TableContent contents={content} />

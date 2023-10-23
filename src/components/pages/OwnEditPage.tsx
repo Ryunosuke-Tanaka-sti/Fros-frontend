@@ -2,8 +2,9 @@ import { FormAuthority } from '@/components/modules/FormAuthority/FormAuthority'
 import { FormCertification } from '@/components/modules/FormCertification/FormCertification';
 import { FormSkills } from '@/components/modules/FormSkills/FormSkills';
 import { FormUser } from '@/components/modules/FormUser/FormUser';
-import { AuthoritiesType, AuthorityType } from '@/types/Authority';
+import { AuthoritiesType } from '@/types/Authority';
 import { CertificationType, CertificationsType } from '@/types/Certification';
+import { NameToID } from '@/types/Common';
 import { SkillType, SkillsType } from '@/types/Skills';
 import { UserInfoType } from '@/types/User';
 
@@ -19,7 +20,7 @@ export const OwnEditPage = () => {
   const authorities: AuthoritiesType = {
     authorities: [{ id: 'xxx', name: 'HTML' }],
   };
-  const authoritiesList: AuthorityType[] = [
+  const authoritiesList: NameToID[] = [
     { id: 'xxx', name: 'HTML' },
     { id: 'yyy', name: 'HTML' },
     { id: 'zzz', name: 'HTML' },

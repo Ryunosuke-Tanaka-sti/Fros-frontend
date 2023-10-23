@@ -1,6 +1,10 @@
+import { NameToID } from '@/types/Common';
+
 export type SkillsType = {
-  skills: SkillType[];
+  skills: UserSkillType[];
 };
+
+type UserSkillType = NameToID & { level: number };
 
 export type SkillType = {
   id: string;

@@ -1,6 +1,6 @@
-import { AuthorityType } from './Authority';
-import { CertificationType } from './Certification';
-import { SkillType } from './Skills';
+import { AuthoritiesType } from './Authority';
+import { CertificationsType } from './Certification';
+import { SkillsType } from './Skills';
 
 export type UserInfoType = {
   id: string;
@@ -11,9 +11,4 @@ export type UserInfoType = {
   isAdmin: boolean;
 };
 
-export type UserType = {
-  info: UserInfoType;
-  skills: SkillType[];
-  certification: CertificationType[];
-  authorities: AuthorityType[];
-};
+export type UserType = UserInfoType & SkillsType & CertificationsType & AuthoritiesType;

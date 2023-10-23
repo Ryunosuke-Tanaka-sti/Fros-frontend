@@ -1,5 +1,7 @@
+import { NameToID } from '@/types/Common';
+
 export type AuthoritiesType = {
-  authorities: AuthorityType[];
+  authorities: NameToID[];
 };
 
 export type AuthorityType = {

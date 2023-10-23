@@ -7,7 +7,7 @@ import { UserInfoType } from '@/types/User';
 type CardComponentUserType = {
   userInfo: UserInfoType;
   ownFlag: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 export const CardComponentUser = (props: CardComponentUserType) => {
