@@ -5,14 +5,15 @@ import { SkillType } from '@/types/Skills';
 
 type SearchResultComponentSkillProps = {
   name: string;
+  image: string;
   skill: SkillType;
 };
 
 export const SearchResultComponentSkill = (props: SearchResultComponentSkillProps) => {
-  const { name, skill } = props;
+  const { name, skill, image } = props;
   return (
     <div className="flex w-full max-w-md flex-col gap-3 rounded-lg border-2 border-main-sub p-4">
-      <CardContentTitle title={name} image="https://placehold.jp/150x150.png" />
+      <CardContentTitle title={name} image={image} />
       <DividerComponent />
       <CardContentSkills skill={skill} />
     </div>

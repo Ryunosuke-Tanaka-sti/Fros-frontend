@@ -22,7 +22,9 @@ export const useAuth = () => {
   const singOutAction = () => {
     signOut(auth);
   };
-  const uid: string = useMemo(() => (auth.currentUser ? auth.currentUser.uid : ''), [auth]);
+  // const uid: string = useMemo(() => (auth.currentUser ? auth.currentUser.uid : ''), [auth]);
+  const uid = '3E8620E8-BA38-1407-AC2D-AFC36AEAECF0';
+
   const user = useMemo(() => auth.currentUser, [auth]);
 
   return { auth, signInAction, singOutAction, uid, user };

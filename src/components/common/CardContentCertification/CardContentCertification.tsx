@@ -8,7 +8,8 @@ type CardContentCertificationProps = {
 export const CardContentCertification = (props: CardContentCertificationProps) => {
   const { certification } = props;
   const { name, expiration } = certification;
-  const dateFormate = (date: Date) => {
+  const dateFormate = (_date: string) => {
+    const date = new Date(_date);
     return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
   };
   return (

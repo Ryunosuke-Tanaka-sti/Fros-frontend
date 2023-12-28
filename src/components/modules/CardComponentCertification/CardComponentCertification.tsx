@@ -8,7 +8,7 @@ export const CardComponentCertification = (props: CertificationsType) => {
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">
-        <CardTitle title="ユーザー情報" />
+        <CardTitle title="資格情報" />
         <DividerComponent />
         <div className="flex flex-col gap-4">
           {certifications.map((certification) => (

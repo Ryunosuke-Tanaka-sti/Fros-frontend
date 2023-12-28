@@ -4,10 +4,10 @@ export type CertificationsType = {
   certifications: UserCertificationType[];
 };
 
-type UserCertificationType = NameToID & { expiration?: Date };
+type UserCertificationType = NameToID & { expiration?: string };
 
 export type CertificationType = {
   id: string;
   name: string;
-  expiration?: Date;
+  expiration?: string;
 };

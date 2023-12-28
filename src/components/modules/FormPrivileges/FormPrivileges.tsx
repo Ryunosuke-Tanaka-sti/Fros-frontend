@@ -6,23 +6,23 @@ import { Select, SelectItem } from '@tremor/react';
 import { ButtonComponent } from '@/components/common/ButtonComponent/ButtonComponent';
 import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemAuthority } from '@/components/common/FormItemAuthority/FormItemAuthority';
-import { AuthoritiesType } from '@/types/Authority';
+import { PrivilegesType } from '@/types/Authority';
 import { NameToID } from '@/types/Common';
 
-type FormAuthorityProps = {
-  authorities: AuthoritiesType;
-  onSubmitAuthority: (authorities: AuthoritiesType) => void;
-  authoritiesList: NameToID[];
+type FormPrivilegesProps = {
+  privileges: PrivilegesType;
+  onSubmitAuthority: (authorities: PrivilegesType) => void;
+  privilegesList: NameToID[];
 };
 
-export const FormAuthority = (props: FormAuthorityProps) => {
-  const { authorities, onSubmitAuthority, authoritiesList } = props;
+export const FormPrivileges = (props: FormPrivilegesProps) => {
+  const { privileges: authorities, onSubmitAuthority, privilegesList: authoritiesList } = props;
 
-  const { control, handleSubmit, watch } = useForm<AuthoritiesType>({
+  const { control, handleSubmit, watch } = useForm<PrivilegesType>({
     defaultValues: authorities,
   });
-  const { fields, remove, append } = useFieldArray({ control, name: 'authorities' });
-  const omitTargetList = watch('authorities').map((value) => value.id);
+  const { fields, remove, append } = useFieldArray({ control, name: 'privileges' });
+  const omitTargetList = watch('privileges').map((value) => value.id);
   const omitList = useMemo(() => authoritiesList.filter((value) => !omitTargetList.includes(value.id)), [authoritiesList, omitTargetList]);
 
   const onChangeSelect = (id: string) => {
@@ -30,7 +30,7 @@ export const FormAuthority = (props: FormAuthorityProps) => {
     if (!target) return;
     append(target);
   };
-  const onSubmit: SubmitHandler<AuthoritiesType> = async (data: AuthoritiesType) => {
+  const onSubmit: SubmitHandler<PrivilegesType> = async (data: PrivilegesType) => {
     await onSubmitAuthority(data);
   };
   return (
@@ -47,7 +47,7 @@ export const FormAuthority = (props: FormAuthorityProps) => {
         </Select>
         <div className="flex w-full flex-col items-center gap-3">
           {fields.map((field, index) => (
-            <FormItemAuthority key={field.id} control={control} name={`authorities.${index}.name`} onClickDelete={() => remove(index)} />
+            <FormItemAuthority key={field.id} control={control} name={`privileges.${index}.name`} onClickDelete={() => remove(index)} />
           ))}
         </div>
         <ButtonComponent color="main" text="更新" />

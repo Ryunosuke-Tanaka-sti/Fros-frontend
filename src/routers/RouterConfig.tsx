@@ -4,8 +4,8 @@ import { Layout } from '@/components/layout/Layout';
 import { SearchLayout } from '@/components/layout/SearchLayout';
 import { OwnEditPage } from '@/components/pages/OwnEditPage';
 import { OwnPage } from '@/components/pages/OwnPage';
-import { SearchAuthorityPage } from '@/components/pages/SearchAuthorityPage';
 import { SearchCertificationPage } from '@/components/pages/SearchCertificationPage';
+import { SearchPrivilegesPage } from '@/components/pages/SearchPrivilegesPage';
 import { SearchSkillPage } from '@/components/pages/SearchSkillPage';
 import { SearchSummaryPage } from '@/components/pages/SearchSummaryPage';
 import { SearchUserPage } from '@/components/pages/SearchUserPage';
@@ -19,7 +19,7 @@ export const RouterConfig = () => {
           <Route index element={<SearchSummaryPage />} />
           <Route path="user" element={<SearchUserPage />} />
           <Route path="skill" element={<SearchSkillPage />} />
-          <Route path="authority" element={<SearchAuthorityPage />} />
+          <Route path="authority" element={<SearchPrivilegesPage />} />
           <Route path="certification" element={<SearchCertificationPage />} />
         </Route>
         <Route path="profile" element={<Outlet />}>

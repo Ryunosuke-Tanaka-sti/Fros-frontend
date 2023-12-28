@@ -1,10 +1,10 @@
 import { NameToID } from '@/types/Common';
 
-export type AuthoritiesType = {
-  authorities: NameToID[];
+export type PrivilegesType = {
+  privileges: NameToID[];
 };
 
-export type AuthorityType = {
+export type PrivilegeType = {
   id: string;
   name: string;
 };

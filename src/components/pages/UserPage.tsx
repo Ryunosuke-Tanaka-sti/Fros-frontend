@@ -27,7 +27,7 @@ export const UserPage = () => {
     service_line: 'PS',
     image: 'https://placehold.jp/150x150.png',
     id: 'xxxxx',
-    isAdmin: false,
+    fros_privilege: false,
   };
 
   const skills: SkillType[] = [
@@ -70,7 +70,7 @@ export const UserPage = () => {
       <div className="flex max-w-3xl grow flex-col gap-9">
         <CardComponentSkills skills={skills} />
         <CardComponentCertification certifications={certifications} />
-        <CardComponentAuthority authorities={authorities} />
+        <CardComponentAuthority privileges={authorities} />
       </div>
     </div>
   );

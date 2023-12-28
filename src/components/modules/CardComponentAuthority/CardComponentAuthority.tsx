@@ -1,9 +1,9 @@
 import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { DividerComponent } from '@/components/common/Divider/Divider';
-import { AuthoritiesType } from '@/types/Authority';
+import { PrivilegesType } from '@/types/Authority';
 
-export const CardComponentAuthority = (props: AuthoritiesType) => {
-  const { authorities } = props;
+export const CardComponentAuthority = (props: PrivilegesType) => {
+  const { privileges: authorities } = props;
   return (
     <>
       <div className="flex flex-col gap-3 rounded-lg border-4 border-main-sub p-6">

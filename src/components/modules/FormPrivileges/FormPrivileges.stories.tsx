@@ -1,23 +1,23 @@
-import { FormAuthority } from '@/components/modules/FormAuthority/FormAuthority';
+import { FormPrivileges } from '@/components/modules/FormPrivileges/FormPrivileges';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'modules/Form/Authority',
-  component: FormAuthority,
+  component: FormPrivileges,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof FormAuthority>;
+} satisfies Meta<typeof FormPrivileges>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    authorities: {
-      authorities: [],
+    privileges: {
+      privileges: [],
     },
-    authoritiesList: [{ id: 'xxx', name: 'HTML' }],
+    privilegesList: [{ id: 'xxx', name: 'HTML' }],
     onSubmitAuthority: () => null,
   },
 };

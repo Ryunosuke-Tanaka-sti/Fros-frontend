@@ -7,12 +7,13 @@ import { ButtonComponent } from '@/components/common/ButtonComponent/ButtonCompo
 import { CardTitle } from '@/components/common/CardTitle/CardTitle';
 import { FormItemLabel } from '@/components/common/FormItemLabel/FormItemLabel';
 import { FormItemSkill } from '@/components/common/FormItemSkill/FormItemSkill';
-import { SkillType, SkillsType } from '@/types/Skills';
+import { NameToID } from '@/types/Common';
+import { SkillsType } from '@/types/Skills';
 
 type FormSkillsProps = {
   skills: SkillsType;
   onSubmitSkills: (skills: SkillsType) => void;
-  skillsList: SkillType[];
+  skillsList: NameToID[];
 };
 
 export const FormSkills = (props: FormSkillsProps) => {
@@ -28,7 +29,8 @@ export const FormSkills = (props: FormSkillsProps) => {
   const onChangeSelect = (id: string) => {
     const target = skillsList.find((value) => value.id == id);
     if (!target) return;
-    append(target);
+
+    append({ ...target, level: 1 });
   };
   const onSubmit: SubmitHandler<SkillsType> = async (data: SkillsType) => {
     await onSubmitSkills(data);

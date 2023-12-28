@@ -1,4 +1,4 @@
-import { AuthoritiesType } from './Authority';
+import { PrivilegesType } from './Authority';
 import { CertificationsType } from './Certification';
 import { SkillsType } from './Skills';
 
@@ -8,7 +8,14 @@ export type UserInfoType = {
   image: string;
   email: string;
   service_line: string;
-  isAdmin: boolean;
+  fros_privilege: boolean;
 };
 
-export type UserType = UserInfoType & SkillsType & CertificationsType & AuthoritiesType;
+export type ResponseUserType = {
+  id: string;
+  name: string;
+  image: string;
+  fros_privilege: string;
+};
+
+export type UserType = UserInfoType & SkillsType & CertificationsType & PrivilegesType;

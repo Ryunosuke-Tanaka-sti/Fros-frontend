@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    authorities: [
+    privileges: [
       {
         id: 'xxxx',
         name: 'ブログアカウント発行',
